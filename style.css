@@ -138,7 +138,7 @@ body {
     position: relative;
     height: 100vh;
     min-height: 650px;
-    background: url('https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    background: url('img/hero.png') center/cover no-repeat;
     display: flex;
     align-items: center;
 }
@@ -157,7 +157,10 @@ body {
 .hero-content {
     max-width: 650px;
 }
-
+.hero-slogan {
+    color: white;
+    padding: 0px 0px 20px;
+}
 .hero-title {
     font-size: 42px;
     font-weight: 400;
@@ -252,17 +255,17 @@ body {
 
 .img-mini-1 {
     height: 240px;
-    background-image: url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=600&q=80');
+    background-image: url('img/couves.png');
 }
 
 .img-mini-2 {
     height: 180px;
-    background-image: url('https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?auto=format&fit=crop&w=600&q=80');
+    background-image: url('img/prumirim.png');
 }
 
 .img-main {
     height: 440px;
-    background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80');
+    background-image: url('img/selinha.png');
 }
 
 /* Badges flutuantes "100+" e "300+" */
@@ -451,9 +454,9 @@ body {
     transition: var(--transition-smooth);
 }
 
-.card-bg-1 { background-image: url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=700&q=80'); }
-.card-bg-2 { background-image: url('https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=700&q=80'); }
-.card-bg-3 { background-image: url('https://images.unsplash.com/photo-1516690561799-46d8f74f90f6?auto=format&fit=crop&w=700&q=80'); }
+.card-bg-1 { background-image: url('img/IlhadoPrumirim.png'); }
+.card-bg-2 { background-image: url('img/ilhadasCouves.png'); }
+.card-bg-3 { background-image: url('img/ilhadaselinha.png'); }
 
 .roteiro-overlay {
     position: absolute;
@@ -532,6 +535,147 @@ body {
     transform: scale(1);
 }
 
+
+
+        /* ==========================================================================
+           SEÇÃO ROTEIRO COMPLETO (Baseado no texto fornecido)
+           ========================================================================== */
+        .roteiro-section {
+            padding: 80px 24px 120px 24px;
+        }
+
+        .roteiro-container-box {
+            background: var(--navy-dark);
+            color: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .roteiro-detalhes {
+            padding: 60px;
+        }
+
+        .roteiro-meta-tag {
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .roteiro-nome {
+            font-size: 36px;
+            font-weight: 500;
+            margin-bottom: 30px;
+            letter-spacing: -0.5px;
+        }
+
+        .cronograma-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .crono-item span {
+            display: block;
+            font-size: 11px;
+            color: rgba(255,255,255,0.5);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .crono-item p {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .ilhas-lista {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .ilha-item {
+            border-left: 2px solid var(--gold);
+            padding-left: 20px;
+        }
+
+        .ilha-item h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--white);
+        }
+
+        .ilha-item p {
+            font-size: 13.5px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.6;
+        }
+
+        .roteiro-imagem-side {
+            background: url('img/cotacao.png') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 60px;
+        }
+
+        .roteiro-imagem-side::before {
+            content: '';
+            position: absolute;
+            top:0; left:0; width:100%; height:100%;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,18,25,0.9) 100%);
+        }
+
+        .comodidades-box {
+            position: relative;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .comodidades-box h5 {
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: var(--gold);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .comodidades-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .comod-li {
+            font-size: 13px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+
+
 /* ==========================================================================
    SEÇÃO COTAÇÃO RE-ESTILIZADA PARA CONVERSÃO
    ========================================================================== */
@@ -540,6 +684,14 @@ body {
     padding: 120px 24px;
     color: var(--white);
 }
+ /* .cotacao-section {
+    background-image: url(img/cotacao.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 24px;
+ } */
+
 
 .cotacao-grid {
     display: grid;
@@ -652,7 +804,7 @@ body {
 /* ==========================================================================
    FOOTER & INTRO ANIMATIONS ENGINE
    ========================================================================== */
-.footer {
+/* .footer {
     background: #00080c;
     padding: 40px 20px;
     text-align: center;
@@ -660,7 +812,22 @@ body {
     font-size: 13px;
     border-top: 1px solid rgba(255,255,255,0.05);
 }
-
+footer {
+    padding: 80px 10% 40px;
+    background: #000;
+    border-top: 1px solid #111;
+    text-align: center;
+} */
+ footer {
+    padding: 80px 7% 40px;
+    color: rgba(255,255,255,0.4);
+    background: #00080c;
+    border-top: 1px solid #111;
+    text-align: center;
+} 
+footer img.logo-img {
+    width: 80%;
+}
 /* Mecanismo Fluido de Intro por Intersecção */
 .hidden-section {
     opacity: 0;
