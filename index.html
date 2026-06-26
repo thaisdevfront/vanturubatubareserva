@@ -1,142 +1,452 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Van Tur Ubatuba Reserva | Em Desenvolvimento</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Van Tur Ubatuba Reserva | Passeios de Lancha e Escuna em Ubatuba</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <meta name="description" content="Reserve passeios de lancha e escuna em Ubatuba com segurança, conforto e atendimento especializado. Conheça praias paradisíacas e ilhas incríveis.">
+    <meta name="keywords" content="passeio de lancha ubatuba, escuna ubatuba, ilha das couves, ilha anchieta, passeio marítimo ubatuba, turismo ubatuba, lancha ubatuba, reserva passeio ubatuba, van tur ubatuba">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Van Tur Ubatuba Reserva">
+    <meta property="og:title" content="Passeios de Lancha e Escuna em Ubatuba | Van Tur Ubatuba Reserva">
+    <meta property="og:description" content="Conheça as praias e ilhas mais bonitas de Ubatuba com total segurança, conforto e atendimento especializado.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://www.vanturubatubareserva.com.br/">
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#003049,#005f73,#0a9396);
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#fff;
-    text-align:center;
-    padding:20px;
-}
 
-.container{
-    max-width:700px;
-    width:100%;
-}
-
-.logo{
-    font-size:3rem;
-    font-weight:700;
-    margin-bottom:15px;
-    letter-spacing:1px;
-}
-
-.subtitle{
-    color:#ffd166;
-    font-size:1rem;
-    text-transform:uppercase;
-    letter-spacing:3px;
-    margin-bottom:25px;
-}
-
-.card{
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(12px);
-    border:1px solid rgba(255,255,255,0.15);
-    border-radius:24px;
-    padding:50px 35px;
-}
-
-h1{
-    font-size:2.5rem;
-    margin-bottom:20px;
-}
-
-p{
-    font-size:1.1rem;
-    line-height:1.8;
-    color:rgba(255,255,255,0.9);
-}
-
-.badge{
-    display:inline-block;
-    margin-top:30px;
-    background:#ffd166;
-    color:#003049;
-    padding:12px 24px;
-    border-radius:50px;
-    font-weight:600;
-}
-
-.footer{
-    margin-top:30px;
-    font-size:.9rem;
-    opacity:.8;
-}
-
-.wave{
-    font-size:4rem;
-    margin-bottom:20px;
-}
-
-@media(max-width:768px){
-    .logo{
-        font-size:2rem;
-    }
-
-    h1{
-        font-size:2rem;
-    }
-
-    p{
-        font-size:1rem;
-    }
-
-    .card{
-        padding:35px 25px;
-    }
-}
-</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Van Tur <span>Ubatuba</span></a>
+            <nav class="navbar">
+                <a href="#sobre" class="nav-link">O Mar</a>
+                <a href="#diferenciais" class="nav-link">Experiência</a>
+                <a href="#roteiros" class="nav-link">Roteiros</a>
+                <a href="#cotacao" class="nav-link">Reservas</a>
+                <a href="https://wa.me/5512981727798" target="_blank" class="nav-btn">Fale Conosco</a>
+            </nav>
+        </div>
+    </header>
 
-    <div class="logo">Van Tur Ubatuba Reserva</div>
-    <div class="subtitle">Passeios e Experiências Inesquecíveis</div>
+    <section class="hero-section hidden-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container">
+            
+            <div class="hero-content">
+                <img src="img/Logo - Van Tur - Branco - Sem fundo 2.png" alt="" srcset="">
+            
+                 <div class="hero-slogan">"EXPERIÊNCIAS NÁUTICAS EXCLUSIVAS EM UBATUBA</div>
+                <h1 class="hero-title">Sua jornada, nosso destino!</h1>
+                <p class="hero-subtitle">Navegue pelas praias e ilhas mais deslumbrantes do Litoral Norte com o máximo de conforto, segurança e personalização que só a Van Tur oferece.</p>
+                <a href="#cotacao" class="hero-btn">COMEÇAR →</a>
+            </div>
+        </div>
+        <div class="hero-wave" hidden>
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,42.4V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
 
-    <div class="card">
-        <div class="wave">🚤</div>
+    <section id="sobre" class="sobre-section container hidden-section">
+        <div class="sobre-grid" style="padding: 0px 0px 50px 0px;">
+            
+            <div class="sobre-conteudo">
+                <h2 class="sobre-title">PASSEIOS DE LANCHA E ESCUNA EM UBATUBA COM SEGURANÇA E CONFORTO</h2>
+            </div>
 
-        <h1>Estamos Preparando Algo Especial!</h1>
+            <div class="sobre-conteudo">
+                <p class="sobre-text">Conheça praias paradisíacas, ilhas incríveis e cenários 
+                    inesquecíveis em passeios organizados por uma equipe especializada, com anos 
+                    de experiência em navegação, atendimento ao turista e 
+                    segurança marítima.</p>
+            </div>
 
-        <p>
-            Nosso novo site está em desenvolvimento para oferecer uma experiência
-            ainda melhor aos nossos clientes.
-        </p>
+        </div>
+        <div class="sobre-grid">
+            
+            <div class="sobre-imagens">
+                <div class="img-wrapper img-col-1">
+                    <div class="badge-card badge-top">
+                        <span class="badge-num">100+</span>
+                        <span class="badge-txt">Lanchas e Escunas</span>
+                    </div>
+                    <div class="sobre-img-box img-mini-1"></div>
+                    <div class="sobre-img-box img-mini-2"></div>
+                </div>
+                <div class="img-wrapper img-col-2">
+                    <div class="sobre-img-box img-main"></div>
+                    <div class="badge-card badge-bottom">
+                        <span class="badge-num">300+</span>
+                        <span class="badge-txt">Clientes Felizes</span>
+                    </div>
+                </div>
+            </div>
 
-        <p style="margin-top:15px;">
-            Em breve você poderá reservar passeios de lancha, escuna e experiências
-            exclusivas em Ubatuba de forma rápida, segura e prática.
-        </p>
+            <div class="sobre-conteudo">
+                <span class="tag-outline">SOBRE NÓS</span>
+                <h2 class="sobre-title">Nossa missão é  experiências inesquecíveis</h2>
+                <p class="sobre-text">Sua melhor experiência em Ubatuba 
+                    começa com a Van Tur Ubatuba Reserva pelas mais belas 
+                    praias e ilhas de Ubatuba. 
+                </p>
+                <p class="sobre-text">Contamos com uma equipe experiente, 
+                    profissionais qualificados e parceiros confiáveis, 
+                    comprometidos com a segurança, para garantir passeios 
+                    organizados com conforto e satisfação repleta de momentos 
+                    especiais de cada cliente.
+                </p>
+                <p class="sobre-text">Mais do que um passeio, oferecemos a 
+                    oportunidade de conhecer as belezas naturais de Ubatuba 
+                    com tranquilidade, confiança e atendimento personalizado.
+                </p>
+                
+            </div>
 
-        <div class="badge">
-            Site em Desenvolvimento
+        </div>
+    </section>
+
+    <section id="diferenciais" class="diferenciais-section hidden-section">
+        <div class="container diferenciais-grid">
+            
+            <div class="dif-card">
+                <div class="dif-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M2 21h20M2 17h20M5 17V7l7-4 7 4v10M9 13h6"/></svg>
+                </div>
+                <h3>Lanchas Premium</h3>
+                <p>Embarcações modernas com acabamento luxuoso, estofados náuticos premium e salvamento completo.</p>
+            </div>
+
+            <div class="dif-card">
+                <div class="dif-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18M12 12L7.5 7.5M12 12l4.5 4.5"/></svg>
+                </div>
+                <h3>Eventos a Bordo</h3>
+                <p>Celebre aniversários, despedidas ou reuniões corporativas com total privacidade e roteiros flexíveis.</p>
+            </div>
+
+            <div class="dif-card">
+                <div class="dif-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M4 12H2M22 12h-4"/></svg>
+                </div>
+                <h3>Marinheiros Experientes</h3>
+                <p>Navegue com comandantes habilitados que conhecem profundamente os segredos e águas de Ubatuba.</p>
+            </div>
+
+            <div class="dif-card">
+                <div class="dif-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M19.07 4.93l-4.24 4.24M9.17 14.83l-4.24 4.24"/></svg>
+                </div>
+                <h3>Passeios Privativos</h3>
+                <p>Alugue uma embarcação inteira para seu grupo e monte o tempo de parada em cada praia visitada.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="roteiros" class="roteiros-section container hidden-section">
+
+        <div class="sobre-grid" style="padding: 0px 0px 50px 0px;">
+            
+            <div class="sobre-conteudo">
+                <span class="tag-outline">NOSSOS ROTEIROS</span>
+                <h2 class="sobre-title">DESCUBRA OS PARAÍSOS DE UBATUBA</h2>
+            </div>
+
+            <div class="sobre-conteudo">
+                <p class="sobre-text">Explore algumas das praias e ilhas mais procuradas do litoral paulista.</p>
+            </div>
+
+        </div>
+       
+
+        <div class="roteiros-grid">
+            <div class="roteiro-card card-bg-1">
+                <div class="roteiro-overlay"></div>
+                <a href="#cotacao" class="roteiro-arrow-btn">→</a>
+                <div class="roteiro-info-box">
+                    <span class="roteiro-meta">ESCUNA COLETIVA</span>
+                    <h3>Ilha do Prumirim</h3>
+                    <p>Praia paradisíaca com águas calmas, excelente faixa de areia para relaxar e estrutura de quiosques locais.</p>
+                </div>
+            </div>
+
+            <div class="roteiro-card card-bg-2">
+                <div class="roteiro-overlay"></div>
+                <a href="#cotacao" class="roteiro-arrow-btn">→</a>
+                <div class="roteiro-info-box">
+                    <span class="roteiro-meta">LANCHA EXCLUSIVA</span>
+                    <h3>Ilha das Couves</h3>
+                    <p>Águas extraordinariamente cristalinas e esmeraldas, consideradas um verdadeiro santuário da vida marinha.</p>
+                </div>
+            </div>
+
+            <div class="roteiro-card card-bg-3">
+                <div class="roteiro-overlay"></div>
+                <a href="#cotacao" class="roteiro-arrow-btn">→</a>
+                <div class="roteiro-info-box">
+                    <span class="roteiro-meta">LANCHA PREMIUM</span>
+                    <h3>Ilha da Selinha (Rachada)</h3>
+                    <p>Formação geológica imponente abrigando a famosa menor praia do Brasil em um ângulo espetacular.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="cta-banner">
+        <img src="img/bnnr.png" alt="" srcset="">
+    </section>
+   
+    <section id="sobre" class="sobre-section container hidden-section">
+        <div class="sobre-grid" style="padding: 0px 0px 50px 0px;">
+            
+            <div class="sobre-conteudo">
+                <h2 class="sobre-title">COMO FUNCIONA SUA RESERVA</h2>
+            </div>
+
+            <div class="sobre-conteudo">
+                <p class="sobre-text">
+                    1. Clique no botão do WhatsApp.
+                        </br></br>
+                    2. Escolha a data desejada.
+                        </br></br>
+                    3. Receba todas as informações do passeio.
+                        </br></br>
+                    4. Confirme sua reserva.
+                        </br></br>
+                    5. Aproveite uma experiência inesquecível em
+                        Ubatuba.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    
+    <!-- SEÇÃO ROTEIRO COMPLETO -->
+    <section id="roteiro" class="roteiro-section container hidden-section">
+        <div class="roteiro-container-box">
+            <div class="roteiro-detalhes">
+                <span class="roteiro-meta-tag">ROTEIRO INTEGRADO NORTE</span>
+                <h2 class="roteiro-nome">Prumirim e Ilha das Couves</h2>
+                
+                <div class="cronograma-grid">
+                    <div class="crono-item">
+                        <span>CHECK-IN</span>
+                        <p>08:50 hs</p>
+                    </div>
+                    <div class="crono-item">
+                        <span>EMBARQUE</span>
+                        <p>09:10 hs</p>
+                    </div>
+                    <div class="crono-item">
+                        <span>RETORNO</span>
+                        <p>17:00 hs</p>
+                    </div>
+                </div>
+
+                <div class="ilhas-lista">
+                    <div class="ilha-item">
+                        <h4>Ilha do Prumirim (Desembarque de 1h30m)</h4>
+                        <p>Uma das jóias do lado norte de Ubatuba, espetacular para banhos e repleta de vida marinha. Dispõe de quiosques locais na praia e permite o desembarque de cooler.</p>
+                    </div>
+                    <div class="ilha-item">
+                        <h4>Ilha das Couves (Desembarque de 1h30m)</h4>
+                        <p>O destino mais cobiçado de Ubatuba. Verdadeiro aquário natural de águas transparentes. Conta com o tradicional Quiosque da Dona Célia (porções e pratos pagos à parte) e permite cooler.</p>
+                    </div>
+                    <div class="ilha-item">
+                        <h4>Ilha da Selinha / Ilha Rachada (Panorâmica)</h4>
+                        <p>Aproximação exclusiva e navegação pertinho para contemplar a beleza singular e tirar fotos da considerada menor praia do Brasil.</p>
+                    </div>
+                    <div class="ilha-item">
+                        <h4>Ilha da Rapada (Panorâmica)</h4>
+                        <p>Parada estratégica bem próxima para registros fotográficos marcantes desta majestosa formação rochosa esculpida pelo mar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="roteiro-imagem-side">
+                <div class="comodidades-box">
+                    <h5>ESTRUTURA A BORDO INCLUSA</h5>
+                    <div class="comodidades-grid">
+                        <div class="comod-li">🚽 Banheiro integrado</div>
+                        <div class="comod-li">🌈 Espaguete flutuador</div>
+                        <div class="comod-li">🦺 Coletes salvatagem</div>
+                        <div class="comod-li">🛶 Bote de apoio</div>
+                    </div>
+                    <p style="font-size: 11px; margin-top: 15px; opacity: 0.6; font-style: italic;">Ponto de Embarque: Praia do Itaguá</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="depoimentos" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag-outline">Feedbacks</span>
+                <h2 class="sobre-title">O Que Nossos Clientes Dizem</h2>
+                <h2></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Atendimento impecável da equipe Van Tur. A lancha estava extremamente limpa e o piloto foi super atencioso na Ilha das Couves."</p>
+                    <div class="testi-author">Amanda Albuquerque</div>
+                </div>
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Fizemos o roteiro privado corporativo com a empresa e superou todas as expectativas. Organização nota 10!"</p>
+                    <div class="testi-author">Bruno Vasconcelos</div>
+                </div>
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Prumirim é paradisíaca! O bote de apoio ajuda muito na hora do desembarque. Recomendo de olhos fechados."</p>
+                    <div class="testi-author">Mariana S. Silva</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cotacao" class="cotacao-section hidden-section">
+        <div class="container cotacao-grid">
+            <div class="cotacao-texto">
+                <span class="tag-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">RESERVA ONLINE</span>
+                <h2 class="cotacao-title">FAÇA SUA COTAÇÃO EM TEMPO REAL</h2>
+                <p>Insira os dados do seu grupo para calcular o valor instantaneamente e garantir a sua vaga na data desejada.</p>
+                <div class="alerta-vagas">⚠️ Alta procura: restam poucos horários para este final de semana.</div>
+                
+            </div>
+
+            <div class="cotacao-box-formulario">
+                <form id="form-calculador">
+                    
+                    <div class="input-group">
+                        <label for="input-nome">Seu Nome Completo</label>
+                        <input type="text" id="input-nome" placeholder="Ex: Maria Silva" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="input-whatsapp-cliente">Seu WhatsApp com DDD</label>
+                        <input type="tel" id="input-whatsapp-cliente" placeholder="Ex: (12) 99999-9999" required>
+                    </div>
+
+                    <div class="form-row" style="display: flex; gap: 16px;">
+                        <div class="input-group" style="flex: 1;">
+                            <label for="select-embarcacao">Embarcação</label>
+                            <select id="select-embarcacao" required>
+                                <option value="" disabled selected>Escolha...</option>
+                                <option value="Escuna">Escuna</option>
+                                <option value="Lancha">Lancha</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group" style="flex: 1;">
+                            <label for="input-data">Data do Passeio</label>
+                            <input type="date" id="input-data" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="select-roteiro">Selecione o Roteiro (Ilhas)</label>
+                        <select id="select-roteiro" required>
+                            <option value="" disabled selected>Selecione um destino marítimo...</option>
+                            <option value="Ilha do Prumirim">Ilha do Prumirim</option>
+                            <option value="Ilha das Couves">Ilha das Couves</option>
+                            <option value="Ilha Anchieta & Praia do Flamengo">Ilha Anchieta & Praia do Flamengo</option>
+                            <option value="Praia do Cedro do Sul (Extremo Sul)">Praia do Cedro do Sul (Extremo Sul)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="input-pessoas">Número de Passageiros</label>
+                        <input type="number" id="input-pessoas" min="1" max="30" value="1" required>
+                    </div>
+                    <div class="alerta-vagas" style="color: #64748b;">⚠️ O preço sofre alterações em algumas datas</div>
+                    <div class="resultado-checkout">
+                        <span class="res-label">VALOR TOTAL (R$ 150,00 por pessoa)</span>
+                        <div class="res-preco" id="preco-dinamico">R$ 150,00</div>
+                    </div>
+
+                    <button type="submit" class="btn-whatsapp">SOLICITAR RESERVA AGORA VIA WHATSAPP</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    
+    
+        <!-- KEYWORDS SEO (oculto mas indexável) -->
+        <div class="seo-keywords" style="font-size:0;color:transparent;height:0;overflow:hidden;">
+        Passeios em Ubatuba, passeio de escuna Ubatuba, passeio de lancha Ubatuba,
+        reserva de passeio Ubatuba, Van Tur Ubatuba Reservas, turismo em Ubatuba,
+        ilhas de Ubatuba, Ilha das Couves, Ilha Anchieta, Praia do Cedro Ubatuba,
+        Praia das Sete Fontes, Praia do Bonete Ubatuba, escuna para Ilha Anchieta,
+        lancha para Ilha das Couves, passeio marítimo Ubatuba, passeio de barco Ubatuba,
+        roteiros turísticos Ubatuba, passeio em família Ubatuba, passeio de barco seguro,
+        turismo náutico Ubatuba, aluguel de lancha Ubatuba, embarcações em Ubatuba,
+        melhores passeios em Ubatuba, praias paradisíacas Ubatuba, conhecer Ubatuba,
+        o que fazer em Ubatuba, passeio para casais Ubatuba, passeio para grupos Ubatuba,
+        reserva online passeio Ubatuba, passeio com guia Ubatuba, turismo litoral norte SP,
+        escuna litoral norte, lancha Ubatuba, passeios turísticos Ubatuba,
+        viagem para Ubatuba, férias em Ubatuba, atrações de Ubatuba,
+        passeios de verão Ubatuba, Van Tur Ubatuba, reservas de escuna,
+        reservas de lancha, passeio Ilha das Couves, passeio Ilha Anchieta,
+        barco turístico Ubatuba, agência de turismo Ubatuba.
         </div>
 
-        <div class="footer">
-            © 2026 Van Tur Ubatuba Reserva • Todos os direitos reservados
+
+
+<footer>
+    <div class="container footer-content">
+        <div class="footer-logo">
+            <img class="" src="img/Logo - Van Tur - Branco - Sem fundo 2.png" alt="" srcset="">
         </div>
-    </div>
+        <div class="footer-nav">
+            <h3>Navegação</h3>
+            <div class="footer-navgc">
+                <a href="#sobre" class="link">O Mar</a>
+                <a href="#diferenciais" class="link">Experiência</a>
+                <a href="#roteiros" class="link">Roteiros</a>
+                <a href="#cotacao" class="link">Reservas</a>
+                <!-- <a href="" target="_blank" class="btn">Fale Conosco</a> -->
+            </div>
+        </div>
 
-</div>
+        <div class="footer-contato">
+             <h3>Contato</h3>
+             <div class="footer-con">
+                <a href="https://wa.me/5512981727798"><i class="fab fa-whatsapp"></i>  +55 12 98172-7798</a>
+                <a href="#"><i class="fas fa-envelope"></i>  vanturubatubareserva@gmail.com</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i>  Av. Leovigildo Dias Vieira, 928 - Itaguá, Ubatuba - SP</a>
+             </div>
+            <div class="footer-socials">
+                <h3>Redes sociais</h3>
+                <a href="https://www.instagram.com/vanturubatubareserva/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/vanturubatubareserva/" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        
+        
+        </div>
+        <div class="footer-bottom">
+            © &copy; 2026 Van Tur Ubatuba Reserva. Todos os direitos reservados. - Desenvolvido por
+            <a href="http://thaismariano.com.br/" target="_blank" rel="noopener noreferrer">Thais Mariano</a>
+        </div>
+    </footer>
 
+    <script src="script.js"></script>
+    <script src="all.js"></script>
 </body>
 </html>
