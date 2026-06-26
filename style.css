@@ -31,12 +31,27 @@ body {
     overflow-x: hidden;
 }
 
+/* section {
+    background-image: url(img/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
 .container {
     width: 100%;
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 24px;
 }
+h1,h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+p{
+    text-transform: uppercase;
+}
+
 
 /* Reusable Tag Badge UI */
 .tag-outline {
@@ -138,7 +153,7 @@ body {
     position: relative;
     height: 100vh;
     min-height: 650px;
-    background: url('img/hero.png') center/cover no-repeat;
+    background: url('img/full.png') center/cover no-repeat;
     display: flex;
     align-items: center;
 }
@@ -150,12 +165,20 @@ body {
 }
 
 .hero-container {
-    position: relative;
+    /* position: relative; */
+    justify-content: center;
     z-index: 10;
+    display: flex;
+    text-align: center;
+    width: 100%;
 }
 
 .hero-content {
     max-width: 650px;
+}
+.hero-content img {
+    max-width: 150px;
+    padding: 0px 0px 20px 0px;
 }
 .hero-slogan {
     color: white;
@@ -309,18 +332,20 @@ body {
 }
 
 .sobre-title {
-    font-size: 32px;
-    font-weight: 500;
+    font-size: 42px;
+    font-weight: 900;
     line-height: 1.3;
     margin-bottom: 24px;
     letter-spacing: -0.5px;
 }
 
 .sobre-text {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.7;
-    color: var(--text-muted);
+    color: var(--navy-dark);
     margin-bottom: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .sobre-lista {
@@ -398,6 +423,17 @@ body {
     color: rgba(255,255,255,0.6);
     line-height: 1.6;
 }
+
+
+section.cta-banner {
+    display: flex;
+    /* max-width: 60%; */
+    justify-content: center;
+}
+section.cta-banner img {
+    max-width: 95%;
+}
+
 
 /* ==========================================================================
    SEÇÃO ROTEIROS
@@ -674,6 +710,52 @@ body {
         }
 
 
+.testimonials-section {
+    padding: 60px 0;
+    background-color: var(--bg-light);
+}
+.testimonials-section .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.testimonials-section .section-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+.testimonials-grid {
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    gap: 24px;
+    margin-top: 32px;
+}
+.testimonials-section .testi-card {
+    background: var(--navy-medium);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+    border: 1px solid #e2e8f0;
+}
+.stars {
+    color: gold;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+.testimonials-section .testi-card p {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.6;
+    font-style: italic;
+}
+.testimonials-section .testi-author {
+    margin-top: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+}
 
 
 /* ==========================================================================
@@ -823,11 +905,54 @@ footer {
     color: rgba(255,255,255,0.4);
     background: #00080c;
     border-top: 1px solid #111;
-    text-align: center;
+    /* text-align: center; */
 } 
-footer img.logo-img {
-    width: 80%;
+.footer-bottom {
+    text-align: center;
 }
+
+.container.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0px 0px 40px;
+}
+.footer-logo {
+    width: 35%;
+}
+footer img {
+    max-width: 80%;
+}
+
+footer .footer-nav, .footer-contato {
+    padding: 20px 40px;
+}
+/* footer  {
+    padding: 20px 40px;
+} */
+footer .footer-navgc, .footer-con {
+    display: grid;
+    padding: 20px 0px;
+}
+footer h3 {
+    text-transform: uppercase;
+    color: white;
+}
+footer a.link {
+    color: white;
+    text-decoration: none;
+    padding: 0px 0px 20px;
+}
+footer .footer-contato a {
+    padding: 0px 0px 20px;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+
 /* Mecanismo Fluido de Intro por Intersecção */
 .hidden-section {
     opacity: 0;
@@ -848,12 +973,46 @@ footer img.logo-img {
     .roteiros-grid { grid-template-columns: repeat(2, 1fr); }
     .diferenciais-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
+@media (min-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
 @media (max-width: 768px) {
     .navbar { display: none; } /* Em ambiente real implementaria menu hambúrguer */
-    .hero-title { font-size: 32px; }
+    .hero-title {
+        font-size: 42px;
+        font-weight: 500;
+    }
+    header{display: none;}
     .roteiros-grid, .diferenciais-grid { grid-template-columns: 1fr; }
     .roteiros-header { flex-direction: column; align-items: flex-start; gap: 20px; }
-    .sobre-imagens { display: none; } /* Otimização mobile para telas compactas */
+    /* .sobre-imagens { display: none; }  */
+    /* Otimização mobile para telas compactas */
     .cotacao-box-formulario { padding: 24px; }
+    .sobre-title { font-size: 29px;}
+    .container.footer-content {
+    display: block;    text-align: center;}
+
+    .footer-logo {
+    width: 100%;
+    padding-bottom: 20px;
+}
+footer .footer-nav, .footer-contato {
+    padding: 20px 10px;
+}
+section.cta-banner {
+    display: none;
+}
+.svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 25px;
+    overflow: visible;
+    vertical-align: -.125em;
+    padding: 0px 10px 0px 0px;
+}
+footer a {
+    font-size: 14px;
+}
 }
