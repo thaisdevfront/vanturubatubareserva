@@ -1549,6 +1549,10 @@ BOTÃO WHATSAPP FLUTUANTE
     width: 100%;
     padding-bottom: 20px;
 }
+footer img {
+    max-width: 60%;
+    height: max-content;
+}
 footer .footer-nav, .footer-contato {
     padding: 20px 10px;
 }
