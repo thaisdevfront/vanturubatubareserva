@@ -1521,16 +1521,17 @@ BOTÃO WHATSAPP FLUTUANTE
     
 }
 @media (max-width: 768px) {
+
     .container .cotacao-grid {padding: 0px;}
     .navbar { display: none; } /* Em ambiente real implementaria menu hambúrguer */
     .hero-title {font-size: 42px;font-weight: 500;}
     header{display: none;}
-
+    .sobre-section {padding: 100px 20px;}
     .sobre-grid {gap: 35px; grid-template-columns: auto;}
     .title-xx {font-size: 24px;}
     .text-xx {font-size: 13px;}
     .sobre-grid.grid-x {gap: 0px;}
-
+    .roteiro-container-box {display: block;}
     .roteiro-detalhes {padding: 35px;}
     .roteiros-grid, .diferenciais-grid { grid-template-columns: 1fr; }
     .roteiros-header { flex-direction: column; align-items: flex-start; gap: 20px; }
@@ -1550,6 +1551,6 @@ BOTÃO WHATSAPP FLUTUANTE
     overflow: visible;
     vertical-align: -.125em;
     padding: 0px 10px 0px 0px;}
-    footer a {font-size: 14px;}
+    footer a {font-size: 12px;}
 
 }
