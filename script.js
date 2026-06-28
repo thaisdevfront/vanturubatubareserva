@@ -48,27 +48,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const precoDinamicoDisplay = document.getElementById('preco-dinamico');
     const formCalculador = document.getElementById('form-calculador');
 
-    const VALOR_POR_PESSOA = 150.00;
+    // const VALOR_POR_PESSOA = 150.00;
 
     // Realiza o cálculo dinâmico baseado no valor de 150,00 por pessoa
-    function calcularOrcamento() {
-        const quantidadePassageiros = parseInt(inputPessoas.value);
+    const PRECO_EMBARCACAO = {
+    "Escuna": 130,
+    "Lancha": 150
+};
 
-        if (quantidadePassageiros > 0) {
-            const total = VALOR_POR_PESSOA * quantidadePassageiros;
-            precoDinamicoDisplay.textContent = total.toLocaleString('pt-BR', { 
-                style: 'currency', 
-                currency: 'BRL' 
-            });
-        } else {
-            precoDinamicoDisplay.textContent = "R$ 0,00";
-        }
-    }
+function calcularOrcamento() {
 
-    inputPessoas.addEventListener('input', calcularOrcamento);
-    
-    // Inicia o cálculo padrão ao carregar a página
-    calcularOrcamento();
+    const passageiros = parseInt(inputPessoas.value) || 0;
+    const embarcacao = selectEmbarcacao.value;
+
+    const valorPorPessoa = PRECO_EMBARCACAO[embarcacao] || 0;
+
+    const total = passageiros * valorPorPessoa;
+
+    precoDinamicoDisplay.textContent = total.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    });
+
+}
+
+inputPessoas.addEventListener('input', calcularOrcamento);
+selectEmbarcacao.addEventListener('change', calcularOrcamento);
+
+calcularOrcamento();
 
     // Disparo dos dados estruturados para o WhatsApp da agência
     formCalculador.addEventListener('submit', function (event) {
@@ -162,3 +169,5 @@ answer.style.maxHeight=answer.scrollHeight+'px';
 });
 
 });
+
+
