@@ -102,3 +102,63 @@ document.addEventListener("DOMContentLoaded", function () {
         window.open(`https://api.whatsapp.com/send?phone=${telefoneAgencia}&text=${mensagemWhatsApp}`, '_blank');
     });
 });
+
+
+// Sessão FAQ acordeons
+const items=document.querySelectorAll('.faq-item');
+
+items.forEach(item=>{
+
+const button=item.querySelector('.faq-question');
+
+button.addEventListener('click',()=>{
+
+const active=document.querySelector('.faq-item.active');
+
+if(active && active!==item){
+
+active.classList.remove('active');
+
+active.querySelector('.faq-answer').style.maxHeight=null;
+
+}
+
+item.classList.toggle('active');
+
+const answer=item.querySelector('.faq-answer');
+
+if(item.classList.contains('active')){
+
+answer.style.maxHeight=answer.scrollHeight+'px';
+
+}else{
+
+answer.style.maxHeight=null;
+
+}
+
+});
+
+});
+
+window.addEventListener('load',()=>{
+
+const first=document.querySelector('.faq-item.active .faq-answer');
+
+if(first){
+
+first.style.maxHeight=first.scrollHeight+'px';
+
+}
+
+});
+
+window.addEventListener('resize',()=>{
+
+document.querySelectorAll('.faq-item.active .faq-answer').forEach(answer=>{
+
+answer.style.maxHeight=answer.scrollHeight+'px';
+
+});
+
+});
