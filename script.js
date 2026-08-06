@@ -45,37 +45,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputData = document.getElementById('input-data');
     const selectRoteiro = document.getElementById('select-roteiro');
     const inputPessoas = document.getElementById('input-pessoas');
-    const precoDinamicoDisplay = document.getElementById('preco-dinamico');
+    // const precoDinamicoDisplay = document.getElementById('preco-dinamico');
     const formCalculador = document.getElementById('form-calculador');
 
     // const VALOR_POR_PESSOA = 150.00;
 
     // Realiza o cálculo dinâmico baseado no valor de 150,00 por pessoa
-    const PRECO_EMBARCACAO = {
-    "Escuna": 130,
-    "Lancha": 150
-};
+//     const PRECO_EMBARCACAO = {
+//     "Escuna": 130,
+//     "Lancha": 150
+// };
 
-function calcularOrcamento() {
+// function calcularOrcamento() {
 
-    const passageiros = parseInt(inputPessoas.value) || 0;
-    const embarcacao = selectEmbarcacao.value;
+//     const passageiros = parseInt(inputPessoas.value) || 0;
+//     const embarcacao = selectEmbarcacao.value;
 
-    const valorPorPessoa = PRECO_EMBARCACAO[embarcacao] || 0;
+//     const valorPorPessoa = PRECO_EMBARCACAO[embarcacao] || 0;
 
-    const total = passageiros * valorPorPessoa;
+//     const total = passageiros * valorPorPessoa;
 
-    precoDinamicoDisplay.textContent = total.toLocaleString('pt-BR', {
-        style: 'currency',
-        currency: 'BRL'
-    });
+//     precoDinamicoDisplay.textContent = total.toLocaleString('pt-BR', {
+//         style: 'currency',
+//         currency: 'BRL'
+//     });
 
-}
+// }
 
-inputPessoas.addEventListener('input', calcularOrcamento);
-selectEmbarcacao.addEventListener('change', calcularOrcamento);
+// inputPessoas.addEventListener('input', calcularOrcamento);
+// selectEmbarcacao.addEventListener('change', calcularOrcamento);
 
-calcularOrcamento();
+// calcularOrcamento();
 
     // Disparo dos dados estruturados para o WhatsApp da agência
     formCalculador.addEventListener('submit', function (event) {
@@ -87,28 +87,30 @@ calcularOrcamento();
         const dataFormatada = inputData.value.split('-').reverse().join('/'); // Converte AAAA-MM-DD para DD/MM/AAAA
         const roteiro = selectRoteiro.value;
         const passageiros = inputPessoas.value;
-        const valorTotal = precoDinamicoDisplay.textContent;
+        // const valorTotal = precoDinamicoDisplay.textContent;
 
         // Insira o número do WhatsApp comercial da Van Tur aqui (DDI + DDD + Número)
         const telefoneAgencia = "5512981727798"; 
         
         // Mensagem organizada e profissional para o atendente receber
         const mensagemWhatsApp = encodeURIComponent(
-            `Olá, Van Tur Ubatuba Reserva! Solicitação de orçamento enviada pelo site:\n\n` +
+            `Olá, Van Tur Ubatuba Reserva! Gostaria de solicitar um orçamento.\n\n` +
             `👤 *Nome:* ${nome}\n` +
-            `📱 *WhatsApp do Cliente:* ${whatsappCliente}\n` +
-            `⛵ *Tipo de Embarcação:* ${embarcacao}\n` +
-            `📅 *Data pretendida:* ${dataFormatada}\n` +
-            `🏝️ *Roteiro desejado:* ${roteiro}\n` +
-            `👥 *Nº de Passageiros:* ${passageiros} pessoa(s)\n` +
-            `💰 *Valor Total Calculado:* ${valorTotal}\n\n` +
-            `Por favor, confirmem a disponibilidade de vagas.`
+            `📱 *WhatsApp:* ${whatsappCliente}\n` +
+            `⛵ *Embarcação:* ${embarcacao}\n` +
+            `📅 *Data desejada:* ${dataFormatada}\n` +
+            `🏝️ *Roteiro:* ${roteiro}\n` +
+            `👥 *Quantidade de passageiros:* ${passageiros}\n\n` +
+            `Aguardo informações sobre disponibilidade e valores. Obrigado!`
         );
 
         // Disparo abrindo em uma nova aba
         window.open(`https://api.whatsapp.com/send?phone=${telefoneAgencia}&text=${mensagemWhatsApp}`, '_blank');
     });
 });
+
+
+
 
 
 // Sessão FAQ acordeons
